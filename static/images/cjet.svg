@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <!-- Plane Body -->
+  <rect x="30" y="40" width="40" height="20" fill="#FF5733" />
+  <!-- Wings -->
+  <rect x="25" y="50" width="50" height="5" fill="#FF5733" />
+  <!-- Tail -->
+  <rect x="45" y="30" width="10" height="10" fill="#FF5733" />
+  <!-- Propeller -->
+  <circle cx="50" cy="50" r="5" fill="#FF5733" />
+</svg>

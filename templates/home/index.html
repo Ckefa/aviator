@@ -1,0 +1,78 @@
+{{ define "index" }}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fly high in the Aviator Game and test your luck!">
+  <meta name="author" content="Your Name">
+  <title>Fly To The Moon</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-gray-800 py-4 shadow-lg">
+    <div class="container mx-auto flex flex-wrap justify-between items-center px-4 md:px-8">
+      <h1 class="text-2xl font-bold text-gray-400">Aviator Game</h1>
+      <div class="text-lg">
+        <span>Balance:</span>
+        <span class="font-bold text-green-400">KES <span id="balance">0.00</span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Game Area -->
+  <main class="container mx-auto mt-6 px-4 md:px-8">
+    <div id="game-area" style="background-image: url('/static/images/sky.jpg');"
+      class="relative rounded-lg shadow-lg h-80 md:h-96 flex  justify-center items-center p-6 bg-cover bg-center overflow-hidden">
+      <!-- Live Odds Section -->
+      <div
+        class="text-4xl md:text-5xl font-bold bg-black flex flex-col justify-center items-center bg-opacity-50  p-4 rounded-lg">
+        <div id="odds-display" class="flex text-green-500">1 X</div>
+        <span id="cashed-out" class="hidden text-2xl text-yellow-500"></span>
+        <span id="disp-burst" class="hidden text-4xl text-red-500">Flew Away!</span>
+      </div>
+
+      <!-- Plane Animation -->
+      <div class="absolute bottom-10 left-10 ">
+        <img src="/static/images/jet.svg" alt="Plane" class="w-20 h-20 md:w-28 md:h-28 plane" id="plane">
+      </div>
+    </div>
+
+    <!-- Betting Controls -->
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 mt-6">
+      <div class="flex flex-wrap items-center justify-between space-y-4 md:space-y-0">
+        <div class="flex flex-wrap items-center space-x-4">
+          <label for="bet-amount" class="text-gray-300 text-lg">Bet Amount:</label>
+          <input type="number" id="bet-amount" value="100" class="bg-gray-700 text-white rounded-lg p-2 w-24">
+          <button id="bet-button" onclick="processBet()"
+            class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-400 transition">
+            Place Bet
+          </button>
+          <button id="cashout-button" onclick="cashout()"
+            class="hidden bg-yellow-500 text-black px-6 py-2 rounded-lg transition">
+            Cashout
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center mt-6 text-gray-400">
+    <p class="text-sm md:text-base">&copy; 2024 Your Brand. All rights reserved.</p>
+  </footer>
+
+  <script>
+  </script>
+  <script src="/static/js/bet.js"></script>
+  <script type="module" src="/static/js/script.js"></script>
+</body>
+
+</html>
+
+{{ end }}
